@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling", "grass-session"]
+build-backend = "hatchling.build"
+
+[project]
+name = "repair-geometries-grass"
+version = "0.1"
+authors = [
+  { name="Manu Halbrügge", email="manu.halbruegge@green-consensus.de" },
+]
+description = "A straightforward wrapper for GRASS GIS that allows for geometry repairs to be performed on a shapefile."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/mhalbruegge/repair-geometries-grass"
+"Bug Tracker" = "https://github.com/mhalbruegge/repair-geometries-grass/issues"
+
+[project.scripts]
+repair-geometries-grass = "repair_geometries_grass.main:main"
+
+[tool.hatch.version]
+path = "repair_geometries_grass/__init__.py"
+
+[tool.isort]
+profile = "black"
